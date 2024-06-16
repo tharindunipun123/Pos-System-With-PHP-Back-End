@@ -1,0 +1,64 @@
+body {
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+    background-color: #343a40; /* Dark background for sidebar */
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    min-width: 0;
+    transition: all 0.25s ease-out;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+    background-color: #343a40;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #495057; /* Darker background on hover */
+    color: #ffffff;
+}
+
+.card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Add some shadow for a better look */
+}
+
+.navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Add shadow to the navbar */
+}
